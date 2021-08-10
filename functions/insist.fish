@@ -44,8 +44,8 @@ function $cmd -V cmd -d "Perform a command repetitively until successful"
     # Output, or not, the attempt count
     if not set --query _flag_quiet
       set --query _flag_attempts
-      and wrn -on "Insisting... Attempt $count of $_flag_attempts"
-      or wrn -on "Insisting... Attempt $count"
+      and wrn -o "Insisting... Attempt $count of $_flag_attempts"
+      or wrn -o "Insisting... Attempt $count"
     end
   
     # Stop the function, or not, if the command was performed successfuly
